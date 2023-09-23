@@ -1,4 +1,7 @@
-import styles from "./Button.module.css";
-export default function Button() {
-  return <button>Button</button>;
+interface Props {
+  label: string;
+}
+
+export default function Button({ label }: Props) {
+  return <button>{label}</button>;
 }

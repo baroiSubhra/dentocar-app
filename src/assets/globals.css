@@ -2,7 +2,7 @@
   --illustration-width: 500px;
   --logo-width: 260px;
   --title-font-size: 4rem;
-  --primary-color: #e56f57;
+  --primary-color: #2684fc;
   --secondary-color: #868686;
   --secondary-color-light: #8686863d;
   --text-black: #393939;
@@ -40,7 +40,7 @@ html.dark {
   --illustration-width: 500px;
   --logo-width: 260px;
   --title-font-size: 4rem;
-  --primary-color: #e56f57;
+  --primary-color: #2684fc;
   --secondary-color: #ddd0d0;
   --secondary-color-light: #ddd0d0;
   --text-black: white;
@@ -102,6 +102,10 @@ a {
 
 .mb-16 {
   margin-bottom: 4rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
 }
 
 .center {
@@ -199,6 +203,30 @@ h5 {
   background-color: var(--nav-bg-color);
 }
 
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.cta {
+  display: flex;
+}
+
 /*========== MEDIA QUERIES ==========*/
 @media screen and (min-width: 1024px) {
   .container {
@@ -214,9 +242,6 @@ h5 {
 }
 
 @media screen and (max-width: 800px) {
-  .container {
-    /* margin-top: 2.5rem; */
-  }
   .title {
     text-align: center;
   }
@@ -230,7 +255,6 @@ h5 {
   }
 
   .cta {
-    display: flex;
     justify-content: center;
   }
 }
@@ -351,27 +375,13 @@ h5 {
   font-weight: 600;
 }
 .nav__logo:hover {
-  color: transparent;
-  background: linear-gradient(
-    to left bottom,
-    rgb(249, 115, 22),
-    rgb(253, 224, 71)
-  );
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  color: var(--primary-color);
 }
 .nav__link {
   transition: 0.3s;
 }
 .nav__link:hover {
-  color: transparent;
-  background: linear-gradient(
-    to left bottom,
-    rgb(249, 115, 22),
-    rgb(253, 224, 71)
-  );
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  color: var(--primary-color);
 }
 .nav__toggle {
   font-size: 1.3rem;
@@ -384,14 +394,7 @@ h5 {
 }
 /* Active menu */
 .active-link {
-  color: transparent;
-  background: linear-gradient(
-    to left bottom,
-    rgb(249, 115, 22),
-    rgb(253, 224, 71)
-  );
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  color: var(--primary-color);
 }
 /* Change background header */
 .scroll-header {
@@ -441,5 +444,11 @@ h5 {
   .change-theme {
     position: initial;
     margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .home-left:nth-child(1) {
+    grid-area: 2;
   }
 }
